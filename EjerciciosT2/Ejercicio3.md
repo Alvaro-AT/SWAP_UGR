@@ -1,0 +1,6 @@
+# Ejercicio 3. ¿Cómo analizar el nivel de carga de cada uno de los subsistemas en el servidor?
+Existen herramientas como **sar** que hemos visto en asignaturas anteriores. Para usarla, simplemente debemos tener activo el proceso **sysstat** y usar el comando `sar -u` que es la opción que nos muestra el nivel de utilización de la CPU.  
+Otras herramientas que también conozco son **top**, **vmstat** y **mpstat**. Todas ellas más o menos manejan información similar, aunque quizá con `top` se tiene una visión más general y simplificada del sistema, ya que no solo muestra la carga de CPU, sino también información relativa a los procesos, memoria y cpu de manera resumida.  
+Por su parte, `vmstat` hace más hincapié en lo referente a la memoria y con `mpstat` tenemos una visión *ampliada* de lo que nos ofrece `sar`. Sin embargo, las mediciones ofrecidas por mpstat son una media aproximada y son realizadas a partir del momento en el que se enciende la máquina. Los valores mostrados por sar son tomados en tiempo real.  
+Para **Windows**, se suele utilizar el **Monitor de rendimiento** (perfmon), que viene instalado por defecto.  
+Existen otras herramientas más centradas en mostrar la información de forma gráfica como son **Munin** (Sistemas basados en Unix), **Nagios**, **Zabbix** o **Ganglia** (Sistemas basados en Unix, Windows).
