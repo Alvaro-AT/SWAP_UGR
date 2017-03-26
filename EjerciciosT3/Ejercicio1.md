@@ -1,0 +1,4 @@
+# Ejercicio 1. Buscar con qué órdenes de terminal o herramientas gráficas podemos configurar bajo Windows y bajo Linux el enrutamiento del tráfico de un servidor para pasar el tráfico desde una subred a otra.
+- Para el caso de **Linux**, se utiliza el comando `route` junto a `add` o `delete` y la opción `-net` o `-host` seguido de la ip de la red o del host, respectivamente. Para indicar la máscara de red y el gateway se utiliza `route add/delete -net/-host ip netmask mascaradered gw direcciongateway`. También se puede añadir o eliminar una ruta por defecto con `route add/delete default` seguido de `gw direcciongateway`.  
+- Para **Windows** también se utiliza el mismo comando, pero con pequeños cambios. Un ejemplo sería el siguiente: `route add ipred/iphost mask mascaradered direcciongateway`.  
+Como alternativa con interfaz gráfica existe un programa de terceros denominado **NetRouteView** ([Enlace](http://www.nirsoft.net/utils/network_route_view.html)).
