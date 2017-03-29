@@ -1,0 +1,2 @@
+# Ejercicio 3. Buscar información sobre los métodos de balanceo que implementan los dispositivos recogidos en el ejercicio 4.2.
+Tanto los balanceadores **BIG IP** de **F5**, los **FortiADC** de **Fortinet**, los de **Cisco**, los de **KEMP Technologies** y los ADC de **Barracuda** utilizan por defecto el método **round-robin**. Algunos también proporcionan algoritmos alternativos como **least connections**, que selecciona el servidor con menos conexiones activas.

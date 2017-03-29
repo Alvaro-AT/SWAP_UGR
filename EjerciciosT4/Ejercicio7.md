@@ -1,0 +1,3 @@
+# Ejercicio 7. Buscar información sobre métodos y herramientas para implementar GSLB.
+En primer lugar, debemos tener dos o más servidores situados en distintas áreas geográficas.  
+Cuando un usuario acceda a nuestro sitio, se le redireccionará al que le ofrezca mejores prestaciones, ya sea por proximidad (localización), por menor carga o latencia, DNS (round-robin), etc...  
