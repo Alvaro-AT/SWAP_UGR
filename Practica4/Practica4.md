@@ -15,7 +15,7 @@ Acto seguido, en el archivo */etc/apache2/sites-available/default-ssl* buscamos 
 Por último, activamos el sitio con `a2ensite default-ssl` y reiniciamos **Apache**. Si todo ha ido bien, veremos lo siguiente al acceder mediante el protocolo **HTTPS**:  
 ![Captura2](Imagenes/Captura2.png "El navegador nos advierte que la conexión no es segura, puesto que el certificado está autofirmado")  
 
-Una vez que hemos comprobado que todo funciona correctamente repetimos el procedimiento con la **máquina 2**.
+Una vez que hemos comprobado que todo funciona correctamente copiamos la clave y el certificado a las otras máquinas con la herramienta **scp** o **rsync**.
 
 ### Configuración del cortafuegos
 Para realizar la configuración del firewall **iptables** he seguido el ejemplo del guión en el que se utiliza esta herramienta para configurar un servidor web. He ido añadiendo las siguientes reglas:  
