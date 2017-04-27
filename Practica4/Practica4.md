@@ -49,4 +49,8 @@ La instalación no resulta demasiado complicada. Voy a mostrar gráficamente los
 
 Para la instalación de Let's Encrypt realizamos `sudo apt-get install python-letsencrypt-apache`. Una vez ha finalizado el proceso de instalación, lo ejecutamos:  
 ![Captura7](Imagenes/Captura7.png "Utilizamos la opción --register-unsafely-without-email para no tener que introducir un email")  
-El **problema** que he tenido es que Let's Encrypt no consigue conectarse con el dominio a través de las máquinas virtuales. Por tanto, y después de habérselo comentado al profesor, se ha concluido con que no es posible de realizar esta tarea opcional.
+
+**ACTUALIZACIÓN**: Abriendo los puertos **80** y **443** en el router he conseguido instalar el certificado:  
+![Captura8](Imagenes/Captura8.png "Seleccionamos el modo fácil para poder acceder mediante HTTP y HTTPS")  
+![Captura9](Imagenes/Captura9.png "El mensaje nos indica que el certificado se ha instalado con éxito")  
+![Captura10](Imagenes/Captura10.png "En el navegador ya sí que nos aparece que la conexión es segura")
