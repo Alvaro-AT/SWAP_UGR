@@ -1,0 +1,3 @@
+# Ejercicio 1. Buscar información sobre cómo calcular el número de conexiones por segundo.
+Podemos utilizar el comando `netstat` con la opción `-an` o `-s` (si queremos dividirlas por protocolo) o el módulo **HttpStubStatusModule** de **nginx** para ver las conexiones actuales.  
+En ambos casos, si queremos obtener las conexiones por segundo, dividimos las peticiones por las conexiones establecidas.

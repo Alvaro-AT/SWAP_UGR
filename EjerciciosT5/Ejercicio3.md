@@ -1,0 +1,3 @@
+# Ejercicio 3. Buscar información sobre características, disponibilidad para diversos SO, etc de herramientas para monitorizar las prestaciones de un servidor.
+Aparte de las herramientas ya comentadas en el [Ejercicio 3](https://github.com/AlvaroAT95/SWAP_UGR/blob/master/EjerciciosT2/Ejercicio3.md) del **Tema 2**, podemos añadir **netstat**, ya utilizada en ejercicios anteriores.  
+Dicha herramienta proporciona información acerca de los aspectos relativos a la red. Otra herramienta que surge como alternativa a netstat es **ss**, que muestra la información de manera más clara para el usuario. Si buscamos una alternativa con interfaz gráfica tenemos, por ejemplo, **TCPView** para Windows.
