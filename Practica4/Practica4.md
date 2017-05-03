@@ -35,6 +35,17 @@ Para realizar la configuración del firewall **iptables** he seguido el ejemplo 
 Una vez hemos terminado, comprobamos que todas las reglas se han añadido satisfactoriamente con el comando `iptables -L -n -v`:  
 ![Captura3](Imagenes/Captura3.png "Resultado de ejecutar el comando iptables -L -n -v")  
 
+**NOTA**: Si con estas reglas no lográsemos acceder a las máquinas virtuales debemos cambiar dichas reglas por las siguientes:  
+
+`iptables -F`  
+`iptables -X`  
+`iptables -P INPUT DROP`  
+`iptables -P OUTPUT DROP`  
+`iptables -A INPUT -i lo -j ACCEPT`  
+`iptables -A OUTPUT -o lo -j ACCEPT`  
+`iptables -A INPUT -i enp0s3 -p tcp -m multiport --dports 22,80,443 -m state --state NEW,ESTABLISHED -j ACCEPT`  
+`iptables -A OUTPUT -o enp0s3 -p tcp -m multiport --sports 22,80,443 -m state --state ESTABLISHED -j ACCEPT`  
+
 Para no perder la nueva configuración que acabamos de realizar después de apagar la máquina, utilizamos la orden `iptables-save > /etc/network/iptables.rules`. Este fichero con las reglas lo recuperaremos cada vez que arranquemos la máquina con `iptables-restore < /etc/network/iptables.rules`.  
 Para que las reglas se apliquen automáticamente en cada arranque, creamos un script llamado *iptables* en la ruta */etc/network/if-pre-up.d* que contenga dicho comando y le damos permisos de ejecución. Otra alternativa es instalar **iptables-persistent**.  
 
