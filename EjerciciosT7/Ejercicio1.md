@@ -1,0 +1,2 @@
+# Ejercicio 1. ¿Qué tamaño de unidad de unidad RAID se obtendrá al configurar un RAID 0 a partir de dos discos de 100 GB y 100 GB? ¿Qué tamaño de unidad de unidad RAID se obtendrá al configurar un RAID 0 a partir de tres discos de 200 GB cada uno?
+200 GB y 600 GB respectivamente, puesto que cada disco es independiente de los demás.
